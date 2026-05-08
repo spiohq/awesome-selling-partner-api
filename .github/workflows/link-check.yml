@@ -21,8 +21,6 @@ jobs:
         with:
           args: >
             --accept 403,429
-            --exclude-loopback
-            --no-progress
             --format markdown
             --output lychee_out.md
             README.md
@@ -64,10 +62,9 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          echo "aW1wb3J0IHN5cwp1cmwgPSBzeXMuYXJndlsxXQp3aXRoIG9wZW4oIlJFQURNRS5tZCIsICJyIikgYXMgZjoKICAgIGxpbmVzID0gZi5yZWFkbGluZXMoKQp3aXRoIG9wZW4oIlJFQURNRS5tZCIsICJ3IikgYXMgZjoKICAgIGZvciBsaW5lIGluIGxpbmVzOgogICAgICAgIGlmIHVybCBub3QgaW4gbGluZToKICAgICAgICAgICAgZi53cml0ZShsaW5lKQo=" | base64 -d > /tmp/remove_url.py
           cp README.md README.md.bak
           while IFS= read -r url; do
-            python3 /tmp/remove_url.py "$url"
+            grep -v -F "$url" README.md > README.md.tmp && mv README.md.tmp README.md
           done < dead_urls.txt
           if diff -q README.md README.md.bak > /dev/null 2>&1; then
             echo "README.md unchanged after URL removal."
