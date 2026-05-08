@@ -21,9 +21,9 @@ jobs:
         with:
           args: >
             --accept 403,429
-            --format markdown
-            --output lychee_out.md
             README.md
+          format: markdown
+          output: lychee_out.md
           fail: false   # Don't fail the step; we handle exit_code ourselves
 
       - name: Upload lychee report
