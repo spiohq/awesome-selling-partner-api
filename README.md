@@ -97,9 +97,9 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 
 ### Go
 
-> ⚠️ There is only one community-maintained Go library for SP-API. Its `go.mod` is still on Go 1.16 and it does not cover recent model changes (Catalog v2022-04-01, FBA Inbound v2024-03-20, Data Kiosk, Orders v2026-01-01). For production use, generating a client via `oapi-codegen` from `amzn/selling-partner-api-models` is the safer path.
-
 - [amzapi/selling-partner-api-sdk](https://github.com/amzapi/selling-partner-api-sdk) - Go toolkit using oapi-codegen, with sample code for Sellers, Reports, Orders, and Listings.
+- [fond-of-vertigo/amazon-sp-api](https://github.com/fond-of-vertigo/amazon-sp-api) - Hand-maintained Go client with broad API coverage (Authorization, Catalog, FBA, Feeds, Finances, Listings, Orders, Reports, Tokens, and more); includes golangci-lint and race-detector CI. Apache-2.0.
+- [renabled/amzn-sp-api-go](https://github.com/renabled/amzn-sp-api-go) - Auto-generated Go client rebuilt twice daily from `amzn/selling-partner-api-models` via a scheduled CI workflow, keeping it current with every SP-API model change. MIT.
 
 ### Ruby
 
@@ -132,6 +132,8 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 ## Guides and Tutorials
 
 - [Building Listings Management Workflows](https://developer-docs.amazon.com/sp-api/docs/building-listings-management-workflows-guide) - Official guide for migrating to JSON listings feeds and the Listings Items API.
+- [Listings Management Workflow Migration](https://developer-docs.amazon.com/sp-api/docs/listings-management-workflow-migration) - Official migration reference mapping legacy XML/flat-file feeds to `JSON_LISTINGS_FEED` and the Listings Items API, with field-level data mapping tables.
+- [Tutorial: Automate SP-API Calls Using the Python SDK](https://developer-docs.amazon.com/sp-api/docs/tutorial-automate-your-sp-api-calls-using-python-sdk) - Official step-by-step tutorial covering LWA token exchange, client generation from the OpenAPI models, and a working Orders API example.
 - [Data Kiosk Workflow Guide](https://developer-docs.amazon.com/sp-api/docs/data-kiosk-workflow-guide) - End-to-end workflow for GraphQL-based reporting.
 - [Pell Software: Developing with the SP-API](https://www.pellsoftware.com/developing-amazon-sp-api/) - First-time Node.js integration walkthrough.
 - [Highside Labs documentation](https://docs.highsidelabs.co/) - Feed Transformer and SP-API Starter Kit docs, plus multi-seller patterns and Laravel integration deep-dives.
