@@ -4,7 +4,7 @@
 
 The Selling Partner API is Amazon's REST-based suite of APIs for sellers and vendors, replacing the legacy Marketplace Web Service (MWS). This list focuses on what **developers** need to build SP-API integrations: official documentation, actively-maintained client libraries, infrastructure tooling, and learning material.
 
-**Out of scope:** seller-facing SaaS products (repricers, inventory tools, analytics dashboards), Amazon advertising tooling, and anything that isn't directly useful when writing code against SP-API. Inactive projects are pruned regularly — see [Contributing](contributing.md) for the maintenance criteria.
+**Out of scope:** seller-facing SaaS products (repricers, inventory tools, analytics dashboards), Amazon advertising tooling, and anything that isn't directly useful when writing code against SP-API. Inactive projects are pruned regularly — see [CONTRIBUTING.md](CONTRIBUTING.md) for the maintenance criteria.
 
 ## Contents
 
@@ -159,11 +159,11 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 
 ## Disclosure
 
-This list is maintained by [Spio](https://spiohq.com). Two entries are projects I am personally involved with: **Spio Smart Proxy** under [Proxies and Gateways](#proxies-and-gateways), and the **Spio Community** under [Communities](#communities). They appear here because the list would feel incomplete without them — Spio Smart Proxy is currently the only purpose-built open-source SP-API reverse proxy in the ecosystem, and there is no comparable independent developer community to point readers to. Both follow the same inclusion criteria as every other entry, and contributors are welcome to PR for their removal if they no longer meet the bar.
+This list is maintained by [Spio](https://spiohq.com). Two entries are projects we are involved with: **Spio Smart Proxy** under [Proxies and Gateways](#proxies-and-gateways), and the **Spio Community** under [Communities](#communities). They appear here because the list would feel incomplete without them. Spio Smart Proxy is currently the only purpose-built open-source SP-API reverse proxy in the ecosystem, and there is no comparable independent developer community to point readers to. Both follow the same inclusion criteria as every other entry, and contributors are welcome to PR for their removal if they no longer meet the bar.
 
 ## Contributing
 
-Contributions are welcome. Read the [contribution guidelines](contributing.md) first. The list explicitly prunes inactive libraries and seller-facing tooling — please review the criteria before submitting a PR.
+Contributions are welcome. Read the [contribution guidelines](CONTRIBUTING.md) first. The list explicitly prunes inactive libraries and seller-facing tooling — please review the criteria before submitting a PR.
 
 ---
 
