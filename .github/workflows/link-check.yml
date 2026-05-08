@@ -51,10 +51,9 @@ jobs:
           name: lychee-report
 
       - name: Remove dead-link lines from README
+        id: remove_links
         run: |
-          # Extract only failed URLs from lychee report (lines containing [ERROR] or [x])
           grep -oP '(?<=\| \[)[^\]]+(?=\].*\| [45]\d\d )' lychee_out.md | sort -u > dead_urls.txt || true
-          # Fallback: if first pattern matches nothing, try simpler extraction of non-2xx lines
           if [ ! -s dead_urls.txt ]; then
             grep -E '\| [45][0-9]{2} ' lychee_out.md | grep -oP 'https?://[^\s|)>\]]+' | sort -u > dead_urls.txt || true
           fi
@@ -62,26 +61,26 @@ jobs:
           cat dead_urls.txt
           if [ ! -s dead_urls.txt ]; then
             echo "No dead URLs extracted from report, skipping README modification."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          # Write the helper script to a file to avoid quoting issues inside YAML
-          cat > /tmp/remove_url.py << 'PYEOF'
-          import sys
-          url = sys.argv[1]
-          readme = sys.argv[2]
-          with open(readme) as fh:
-              lines = fh.readlines()
-          with open(readme, "w") as fh:
-              for line in lines:
-                  if url not in line:
-                      fh.write(line)
-          PYEOF
+          echo "aW1wb3J0IHN5cwp1cmwgPSBzeXMuYXJndlsxXQp3aXRoIG9wZW4oIlJFQURNRS5tZCIsICJyIikgYXMgZjoKICAgIGxpbmVzID0gZi5yZWFkbGluZXMoKQp3aXRoIG9wZW4oIlJFQURNRS5tZCIsICJ3IikgYXMgZjoKICAgIGZvciBsaW5lIGluIGxpbmVzOgogICAgICAgIGlmIHVybCBub3QgaW4gbGluZToKICAgICAgICAgICAgZi53cml0ZShsaW5lKQo=" | base64 -d > /tmp/remove_url.py
+          cp README.md README.md.bak
           while IFS= read -r url; do
-            python3 /tmp/remove_url.py "$url" README.md
+            python3 /tmp/remove_url.py "$url"
           done < dead_urls.txt
+          if diff -q README.md README.md.bak > /dev/null 2>&1; then
+            echo "README.md unchanged after URL removal."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "README.md modified."
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+          rm README.md.bak
 
       - name: Build PR body
         id: pr_body
+        if: steps.remove_links.outputs.changed == 'true'
         run: |
           REPORT=$(cat lychee_out.md)
           DELIM="ghadelimiter_$(openssl rand -hex 8)"
@@ -102,6 +101,7 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - name: Create Pull Request
+        if: steps.remove_links.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           branch: fix/dead-links-${{ github.run_id }}
