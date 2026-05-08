@@ -1,0 +1,171 @@
+# Awesome Selling Partner API [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
+> Curated developer resources for the Amazon Selling Partner API (SP-API) — libraries, tools, guides, and communities.
+
+The Selling Partner API is Amazon's REST-based suite of APIs for sellers and vendors, replacing the legacy Marketplace Web Service (MWS). This list focuses on what **developers** need to build SP-API integrations: official documentation, actively-maintained client libraries, infrastructure tooling, and learning material.
+
+**Out of scope:** seller-facing SaaS products (repricers, inventory tools, analytics dashboards), Amazon advertising tooling, and anything that isn't directly useful when writing code against SP-API. Inactive projects are pruned regularly — see [Contributing](contributing.md) for the maintenance criteria.
+
+## Contents
+
+- [Official Resources](#official-resources)
+  - [Documentation and Reference](#documentation-and-reference)
+  - [Official SDKs and Models](#official-sdks-and-models)
+  - [Sample Solutions and Tooling](#sample-solutions-and-tooling)
+  - [Policy and Compliance](#policy-and-compliance)
+- [Client Libraries](#client-libraries)
+  - [PHP](#php)
+  - [Node.js and TypeScript](#nodejs-and-typescript)
+  - [Python](#python)
+  - [Java](#java)
+  - [C# and .NET](#c-and-net)
+  - [Go](#go)
+  - [Ruby](#ruby)
+  - [Rust](#rust)
+- [Frameworks and Starters](#frameworks-and-starters)
+- [Developer Tooling](#developer-tooling)
+  - [Proxies and Gateways](#proxies-and-gateways)
+  - [Notifications and Event Pipelines](#notifications-and-event-pipelines)
+  - [Code Generation](#code-generation)
+- [Guides and Tutorials](#guides-and-tutorials)
+- [Video Content](#video-content)
+- [Communities](#communities)
+- [Migration from MWS](#migration-from-mws)
+- [Disclosure](#disclosure)
+- [Contributing](#contributing)
+
+## Official Resources
+
+### Documentation and Reference
+
+- [SP-API Documentation Portal](https://developer-docs.amazon.com/sp-api) - Canonical reference for every API, schema, and use case.
+- [SP-API Release Notes](https://developer-docs.amazon.com/sp-api/release-notes) - Authoritative changelog with RSS feed.
+- [SP-API Changelog](https://developer-docs.amazon.com/sp-api/changelog) - Breaking-change announcements and deprecation timelines.
+- [Usage Plans and Rate Limits](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits) - Token-bucket algorithm reference.
+- [Strategies to Optimize Rate Limits](https://developer-docs.amazon.com/sp-api/docs/strategies-to-optimize-rate-limits-for-your-application-workloads) - Throttling strategies, dynamic plans, and batch patterns.
+- [Selling Partner API Blog](https://developer-docs.amazon.com/sp-api-blog/docs/getting-started) - Implementation notes, architecture guidance, and use-case deep dives from the SP-API team.
+
+### Official SDKs and Models
+
+- [amzn/selling-partner-api-models](https://github.com/amzn/selling-partner-api-models) - OpenAPI models, JSON schemas, and Java + C# auth/auth helper libraries. The single source of truth.
+- [amzn/selling-partner-api-sdk](https://github.com/amzn/selling-partner-api-sdk) - Official prebuilt SDKs for Java, PHP, JavaScript, Python, and C#. Apache-2.0.
+- [SP-API SDKs overview](https://developer-docs.amazon.com/sp-api/docs/sp-api-sdks) - When to choose a prebuilt SDK versus a generated one.
+
+### Sample Solutions and Tooling
+
+- [amzn/selling-partner-api-samples](https://github.com/amzn/selling-partner-api-samples) - End-to-end sample solutions (pricing, B2B repricing, FBA inbound, Data Kiosk, listings) deployable on AWS, plus a mock server in `/labs`.
+- [Using Postman for SP-API](https://developer-docs.amazon.com/sp-api/docs/using-postman-for-selling-partner-api-models) - Official Postman workspace and pre-built flows.
+- [SP-API on AWS Quick Start](https://aws-ia.github.io/cfn-ps-amazon-selling-partner-api/) - CloudFormation Partner Solution provisioning IAM role and sample Lambda.
+- [Data Kiosk Schema Explorer Guide](https://developer-docs.amazon.com/sp-api/docs/schema-explorer-guide) - Building GraphQL queries interactively against published schemas.
+
+### Policy and Compliance
+
+- [Security and Compliance Overview](https://developer-docs.amazon.com/sp-api/docs/security-compliance-overview) - DPP and AUP requirements summary.
+- [Key Security Controls Guidance](https://developer-docs.amazon.com/sp-api/docs/guidance-to-address-key-security-controls-in-sp-api-integration) - DPP control mapping with concrete implementation steps.
+- [Updates to the Data Protection Policy and Acceptable Use Policy](https://developer-docs.amazon.com/sp-api/changelog/updates-to-the-data-protection-policy-and-acceptable-use-policy) - November 2025 update introducing "Solution Provider" terminology.
+
+## Client Libraries
+
+Only actively-maintained libraries are listed. "Actively maintained" means a release within the last 12 months and tracking of recent SP-API model changes. Inactive projects (such as `clousale/amazon-sp-api-php`, `ScaleLeap/selling-partner-api-sdk`, and `ericcj/amz_sp_api`) have been pruned.
+
+### PHP
+
+- [jlevers/selling-partner-api](https://github.com/jlevers/selling-partner-api) - Modern Saloon-based PHP 8.2+ client with DTOs, full Seller and Vendor coverage, and automatic Restricted Data Token handling. BSD-3-Clause.
+- [amazon-php/sp-api-sdk](https://github.com/amazon-php/sp-api-sdk) - PSR-compliant SDK designed to pass Amazon DPP audits, with strict semantic-versioning around Amazon's BC breaks. MIT.
+- [highsidelabs/laravel-spapi](https://github.com/highsidelabs/laravel-spapi) - Laravel wrapper around `jlevers/selling-partner-api` with multi-seller credential management. BSD-3-Clause.
+- [amzn/selling-partner-api-sdk (PHP)](https://github.com/amzn/selling-partner-api-sdk/tree/main/php) - Amazon's official PHP SDK with built-in rate limiter and RDT support. Apache-2.0.
+
+### Node.js and TypeScript
+
+- [amz-tools/amazon-sp-api](https://github.com/amz-tools/amazon-sp-api) - Most-installed community client (`amazon-sp-api` on npm) with internal rate limiting, automatic token refresh, and report download helpers.
+- [bizon/selling-partner-api-sdk](https://github.com/bizon/selling-partner-api-sdk) - Modular TypeScript SDK with per-API packages (`@sp-api-sdk/*`), auto-generated types, dual CJS/ESM output, and notification/report/feed schemas.
+- [amzn/selling-partner-api-sdk (JavaScript)](https://github.com/amzn/selling-partner-api-sdk/tree/main/javascript) - Amazon's official JavaScript SDK with built-in rate limiter. Apache-2.0.
+
+### Python
+
+- [saleweaver/python-amazon-sp-api](https://github.com/saleweaver/python-amazon-sp-api) - The de-facto Python wrapper, with httpx-based transport, Data Kiosk support, and active monthly releases. PyPI: `python-amazon-sp-api`.
+- [amzn/selling-partner-api-sdk (Python)](https://github.com/amzn/selling-partner-api-sdk/tree/main/python) - Amazon's official Python SDK. Apache-2.0.
+
+### Java
+
+- [amzn/selling-partner-api-sdk (Java)](https://github.com/amzn/selling-partner-api-sdk/tree/main/java) - Amazon's official Java SDK with built-in rate limiter and RDT support. The recommended starting point. Apache-2.0.
+- [amzn/selling-partner-api-models — sellingpartner-api-aa-java](https://github.com/amzn/selling-partner-api-models/tree/main/clients/sellingpartner-api-aa-java) - Official auth-and-auth helper library, used when generating clients via swagger-codegen against the OpenAPI models.
+
+### C# and .NET
+
+- [abuzuhri/Amazon-SP-API-CSharp](https://github.com/abuzuhri/Amazon-SP-API-CSharp) - The dominant community .NET library (`FikaAmazonAPI`), tracking the latest API versions including Orders v2026-01-01.
+- [amzn/selling-partner-api-sdk (C#)](https://github.com/amzn/selling-partner-api-sdk/tree/main/csharp) - Amazon's official C# SDK (`software.amzn.spapi` on NuGet). Apache-2.0.
+- [amzn/selling-partner-api-models — sellingpartner-api-aa-csharp](https://github.com/amzn/selling-partner-api-models/tree/main/clients/sellingpartner-api-aa-csharp) - Official auth-and-auth helper library for use with swagger-codegen-generated C# clients.
+
+### Go
+
+> ⚠️ The Go ecosystem currently has only one community-maintained SP-API library. Evaluate carefully before depending on it for production workloads.
+
+- [amzapi/selling-partner-api-sdk](https://github.com/amzapi/selling-partner-api-sdk) - Go toolkit using oapi-codegen, with sample code for Sellers, Reports, Orders, and Listings.
+
+### Ruby
+
+- [lineofflight/peddler](https://github.com/lineofflight/peddler) - Ruby interface auto-generated from the latest OpenAPI models, covering all SP-API endpoints, reports, notifications, feeds, and Data Kiosk. Lightweight via Zeitwerk; provides type-safe response parsing.
+
+### Rust
+
+> ⚠️ Rust support for SP-API is early-stage. The crate below is the only currently-published option and has limited downloads. Treat as experimental.
+
+- [houxd/amazon-spapi](https://github.com/houxd/amazon-spapi) - Rust client library for SP-API (`amazon-spapi` on crates.io). MIT.
+
+## Frameworks and Starters
+
+- [Highside Labs Laravel SP API starter kit](https://docs.highsidelabs.co/) - Production-ready Laravel scaffold with credential management, OAuth, and feed/report helpers.
+- [SP-API on AWS Quick Start](https://aws-ia.github.io/cfn-ps-amazon-selling-partner-api/) - CloudFormation template provisioning an IAM role and sample Lambda.
+
+## Developer Tooling
+
+### Proxies and Gateways
+
+- [Spio Smart Proxy](https://github.com/spiohq/smart-proxy) - Open-source SP-API reverse proxy with per-account token-bucket rate limiting, response caching, automatic Restricted Data Token minting, and built-in DPP-compliant PII redaction. Single Go binary, embedded SQLite, dashboard. AGPL-3.0. Maintained by the curator (see [Disclosure](#disclosure)).
+
+### Notifications and Event Pipelines
+
+- [Notifications API v1 Use Case Guide](https://developer-docs.amazon.com/sp-api/docs/notifications-api-v1-use-case-guide) - Canonical setup for SQS and EventBridge destinations.
+- [Set up notifications using SQS](https://developer-docs.amazon.com/sp-api/docs/set-up-notifications-with-amazon-sqs) - Step-by-step SQS workflow including IAM permission templates.
+
+### Code Generation
+
+- [highsidelabs/saloon-sdk-generator](https://github.com/highsidelabs/saloon-sdk-generator) - PHP SDK generator built on Saloon, used to generate `jlevers/selling-partner-api` from the OpenAPI specs.
+
+## Guides and Tutorials
+
+- [Building Listings Management Workflows](https://developer-docs.amazon.com/sp-api/docs/building-listings-management-workflows-guide) - Canonical guide for migrating to JSON listings feeds and the Listings Items API.
+- [Data Kiosk Workflow Guide](https://developer-docs.amazon.com/sp-api/docs/data-kiosk-workflow-guide) - End-to-end workflow for GraphQL-based reporting.
+- [Pell Software: Developing with the SP-API](https://www.pellsoftware.com/articles/developing-amazon-sp-api/) - First-time Node.js integration walkthrough.
+- [Highside Labs blog](https://docs.highsidelabs.co/) - Multi-seller patterns, feed conversion, and Laravel integration deep-dives.
+- [Deltologic SP-API guide](https://www.deltologic.com/blog/a-step-by-step-guide-to-understanding-and-using-amazons-selling-partner-api) - Multi-part series covering setup through Notifications.
+
+## Video Content
+
+- [SP-API Developer University on YouTube](https://www.youtube.com/@amazon-sp-api) - Amazon's official channel with webinars, demos, and fireside chats.
+- [SP-API Developer University Hub](https://developer.amazonservices.com/developer-university) - On-demand webinar index with topic filtering.
+
+## Communities
+
+- [amzn/selling-partner-api-models GitHub Discussions](https://github.com/amzn/selling-partner-api-models/discussions) - The most active SP-API technical forum, with responses from Amazon Solutions Architects.
+- [Stack Overflow: amazon-selling-partner-api tag](https://stackoverflow.com/questions/tagged/amazon-selling-partner-api) - Q&A archive.
+- [Spio Community](https://spiohq.com) - Discourse instance for SP-API developers, run by the curator (see [Disclosure](#disclosure)).
+
+## Migration from MWS
+
+- [SP-API Migration Hub](https://developer-docs.amazon.com/sp-api/page/migration-hub) - Central reference for migration dates, endpoint mappings, and best practices.
+- [MWS-to-SP-API Migration Guide](https://developer-docs.amazon.com/sp-api/docs/amazon-mws-to-sp-api-migration-guide) - Hybrid app workflow and authorization migration.
+
+## Disclosure
+
+This list is maintained by [Spio](https://spiohq.com). Two entries are projects I am personally involved with: **Spio Smart Proxy** under [Proxies and Gateways](#proxies-and-gateways), and the **Spio Community** under [Communities](#communities). They appear here because the list would feel incomplete without them — Spio Smart Proxy is currently the only purpose-built open-source SP-API reverse proxy in the ecosystem, and there is no comparable independent developer community to point readers to. Both follow the same inclusion criteria as every other entry, and contributors are welcome to PR for their removal if they no longer meet the bar.
+
+## Contributing
+
+Contributions are welcome. Read the [contribution guidelines](contributing.md) first. The list explicitly prunes inactive libraries and seller-facing tooling — please review the criteria before submitting a PR.
+
+---
+
+To the extent possible under law, the curator has waived all copyright and related or neighboring rights to this work.
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
