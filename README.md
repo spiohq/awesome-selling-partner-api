@@ -22,7 +22,6 @@ The Selling Partner API is Amazon's REST-based suite of APIs for sellers and ven
   - [Go](#go)
   - [Ruby](#ruby)
   - [Rust](#rust)
-- [Frameworks and Starters](#frameworks-and-starters)
 - [Developer Tooling](#developer-tooling)
   - [Proxies and Gateways](#proxies-and-gateways)
   - [Notifications and Event Pipelines](#notifications-and-event-pipelines)
@@ -32,7 +31,6 @@ The Selling Partner API is Amazon's REST-based suite of APIs for sellers and ven
 - [Communities](#communities)
 - [Migration from MWS](#migration-from-mws)
 - [Disclosure](#disclosure)
-- [Contributing](#contributing)
 
 ## Official Resources
 
@@ -113,11 +111,6 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 
 - [houxd/amazon-spapi](https://github.com/houxd/amazon-spapi) - Rust client library for SP-API (`amazon-spapi` on crates.io). MIT.
 
-## Frameworks and Starters
-
-- [Highside Labs Laravel SP API starter kit](https://docs.highsidelabs.co/) - Production-ready Laravel scaffold with credential management, OAuth, and feed/report helpers.
-- [SP-API on AWS Quick Start](https://aws-ia.github.io/cfn-ps-amazon-selling-partner-api/) - CloudFormation template provisioning an IAM role and sample Lambda.
-
 ## Developer Tooling
 
 ### Proxies and Gateways
@@ -150,7 +143,7 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 
 - [amzn/selling-partner-api-models GitHub Discussions](https://github.com/amzn/selling-partner-api-models/discussions) - The most active SP-API technical forum, with responses from Amazon Solutions Architects.
 - [Stack Overflow: amazon-selling-partner-api tag](https://stackoverflow.com/questions/tagged/amazon-selling-partner-api) - Q&A archive.
-- [Spio Community](https://spiohq.com) - Discourse instance for SP-API developers, run by the curator (see [Disclosure](#disclosure)).
+- [Spio Community](https://spiohq.com) - Discourse instance for SP-API developers, run by the curator (see Disclosure section below).
 
 ## Migration from MWS
 
@@ -159,11 +152,11 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 
 ## Disclosure
 
-This list is maintained by [Spio](https://spiohq.com). Two entries are projects we are involved with: **Spio Smart Proxy** under [Proxies and Gateways](#proxies-and-gateways), and the **Spio Community** under [Communities](#communities). They appear here because the list would feel incomplete without them. Spio Smart Proxy is currently the only purpose-built open-source SP-API reverse proxy in the ecosystem, and there is no comparable independent developer community to point readers to. Both follow the same inclusion criteria as every other entry, and contributors are welcome to PR for their removal if they no longer meet the bar.
+This list is maintained by Stefan, founder of Spio. Two of the entries are projects I am personally involved with: **Spio Smart Proxy** under Proxies and Gateways, and the **Spio Community** under Communities. They appear here because the list would feel incomplete without them. Spio Smart Proxy is currently the only purpose-built open-source SP-API reverse proxy in the ecosystem, and there is no comparable independent developer community to point readers to. Both follow the same inclusion criteria as every other entry, and contributors are welcome to PR for their removal if they no longer meet the bar.
 
 ## Contributing
 
-Contributions are welcome. Read the [contribution guidelines](CONTRIBUTING.md) first. The list explicitly prunes inactive libraries and seller-facing tooling — please review the criteria before submitting a PR.
+Contributions are welcome. Read the contribution guidelines first. The list explicitly prunes inactive libraries and seller-facing tooling — please review the criteria before submitting a PR.
 
 ---
 
