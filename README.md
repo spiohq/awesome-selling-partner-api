@@ -2,7 +2,7 @@
 
 > Curated developer resources for the Amazon Selling Partner API (SP-API): libraries, tools, guides, and communities.
 
-The Selling Partner API is Amazon's REST-based suite of APIs for sellers and vendors, replacing the legacy Marketplace Web Service (MWS). This list focuses on what **developers** need to build SP-API integrations: official documentation, actively-maintained client libraries, infrastructure tooling, and learning material.
+The Selling Partner API is Amazon's REST-based suite of APIs for sellers and vendors. This list focuses on what **developers** need to build SP-API integrations: official documentation, actively-maintained client libraries, infrastructure tooling, and learning material.
 
 **Out of scope:** seller-facing SaaS products (repricers, inventory tools, analytics dashboards), Amazon advertising tooling, and anything that isn't directly useful when writing code against SP-API. Inactive projects are pruned regularly; see the contribution guidelines for the maintenance criteria.
 
@@ -29,7 +29,6 @@ The Selling Partner API is Amazon's REST-based suite of APIs for sellers and ven
 - [Guides and Tutorials](#guides-and-tutorials)
 - [Video Content](#video-content)
 - [Communities](#communities)
-- [Migration from MWS](#migration-from-mws)
 - [Disclosure](#disclosure)
 
 ## Official Resources
@@ -149,10 +148,6 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 - [amzn/selling-partner-api-models GitHub Discussions](https://github.com/amzn/selling-partner-api-models/discussions) - The most active SP-API technical forum, with responses from Amazon Solutions Architects.
 - [Stack Overflow: amazon-selling-partner-api tag](https://stackoverflow.com/questions/tagged/amazon-selling-partner-api) - Q&A archive.
 - [Spio Community](https://spiohq.com) - Discourse instance for SP-API developers, run by the curator (see [Disclosure](#disclosure)).
-
-## Migration from MWS
-
-- [MWS-to-SP-API Migration Guide](https://developer-docs.amazon.com/sp-api/docs/amazon-mws-to-sp-api-migration-guide) - Hybrid app workflow and authorization migration.
 
 ## Disclosure
 
