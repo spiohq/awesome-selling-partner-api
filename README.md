@@ -152,7 +152,6 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 
 ## Migration from MWS
 
-- [SP-API Migration Hub](https://developer-docs.amazon.com/sp-api/page/migration-hub) - Central reference for migration dates, endpoint mappings, and best practices.
 - [MWS-to-SP-API Migration Guide](https://developer-docs.amazon.com/sp-api/docs/amazon-mws-to-sp-api-migration-guide) - Hybrid app workflow and authorization migration.
 
 ## Disclosure
