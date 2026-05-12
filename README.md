@@ -159,8 +159,10 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 ## Communities
 
 - [amzn/selling-partner-api-models GitHub Discussions](https://github.com/amzn/selling-partner-api-models/discussions) - The most active SP-API technical forum, with responses from Amazon Solutions Architects.
-- [Stack Overflow: amazon-selling-partner-api tag](https://stackoverflow.com/questions/tagged/amazon-selling-partner-api) - Q&A archive.
+- [amzn/selling-partner-api-samples GitHub Discussions](https://github.com/amzn/selling-partner-api-samples/discussions) - Amazon-staffed forum focused on sample code and workshop questions.
+- [SP-API Developers WhatsApp group](https://chat.whatsapp.com/JO6QqPiwOrSJuDAXfnyBA1) - Independent practitioner community maintained by Marco Tibaldeschi.
 - [Spio Community](https://spiohq.com) - Vendor-hosted Discourse forum for SP-API developers, run by the curator (see Contributing section below).
+- [Stack Overflow: amazon-selling-partner-api tag](https://stackoverflow.com/questions/tagged/amazon-selling-partner-api) - Q&A archive.
 
 ## Compliance and Regulatory
 
