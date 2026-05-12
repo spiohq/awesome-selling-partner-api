@@ -84,13 +84,13 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 ### Java
 
 - [amzn/selling-partner-api-sdk (Java)](https://github.com/amzn/selling-partner-api-sdk/tree/main/java) - Amazon's official Java SDK with built-in rate limiter and RDT support; the best starting point for Java integrations. Apache-2.0.
-- [amzn/selling-partner-api-models — sellingpartner-api-aa-java](https://github.com/amzn/selling-partner-api-models/tree/main/clients/sellingpartner-api-aa-java) - Official auth-and-auth helper library, used when generating clients via swagger-codegen against the OpenAPI models.
+- [amzn/selling-partner-api-models - sellingpartner-api-aa-java](https://github.com/amzn/selling-partner-api-models/tree/main/clients/sellingpartner-api-aa-java) - Official auth-and-auth helper library, used when generating clients via swagger-codegen against the OpenAPI models.
 
 ### C# and .NET
 
 - [abuzuhri/Amazon-SP-API-CSharp](https://github.com/abuzuhri/Amazon-SP-API-CSharp) - The dominant community .NET library (`FikaAmazonAPI`), tracking recent SP-API versions including FBA Inbound v2024-03-20.
 - [amzn/selling-partner-api-sdk (C#)](https://github.com/amzn/selling-partner-api-sdk/tree/main/csharp) - Amazon's official C# SDK (`software.amzn.spapi` on NuGet). Apache-2.0.
-- [amzn/selling-partner-api-models — sellingpartner-api-aa-csharp](https://github.com/amzn/selling-partner-api-models/tree/main/clients/sellingpartner-api-aa-csharp) - Official auth-and-auth helper library for use with swagger-codegen-generated C# clients.
+- [amzn/selling-partner-api-models - sellingpartner-api-aa-csharp](https://github.com/amzn/selling-partner-api-models/tree/main/clients/sellingpartner-api-aa-csharp) - Official auth-and-auth helper library for use with swagger-codegen-generated C# clients.
 
 ### Go
 
