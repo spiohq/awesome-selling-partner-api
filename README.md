@@ -26,6 +26,8 @@ The Selling Partner API is Amazon's REST-based suite of APIs for sellers and ven
   - [Proxies and Gateways](#proxies-and-gateways)
   - [Notifications and Event Pipelines](#notifications-and-event-pipelines)
   - [Code Generation](#code-generation)
+  - [Authentication and RDT](#authentication-and-rdt)
+  - [MCP Servers and AI Integration](#mcp-servers-and-ai-integration)
 - [Guides and Tutorials](#guides-and-tutorials)
 - [Video Content](#video-content)
 - [Communities](#communities)
@@ -126,6 +128,16 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 - [highsidelabs/saloon-sdk-generator](https://github.com/highsidelabs/saloon-sdk-generator) - PHP SDK generator built on Saloon, used to generate `jlevers/selling-partner-api` from the OpenAPI specs.
 - [oapi-codegen](https://github.com/oapi-codegen/oapi-codegen) - Go code generator from OpenAPI 3.x specs; the recommended approach for generating Go SP-API clients from `amzn/selling-partner-api-models`.
 - [OpenAPI Generator](https://openapi-generator.tech/) - Multi-language generator used by the official Amazon SDKs and many community libraries; supports 50+ target languages.
+
+### Authentication and RDT
+
+- [Tokens API Use Case Guide](https://developer-docs.amazon.com/sp-api/docs/tokens-api-use-case-guide) - Canonical reference for Restricted Data Token issuance and PII access patterns.
+- [RestrictedDataTokenWorkflow.java](https://github.com/amzn/selling-partner-api-models/blob/main/clients/sample-code/RestrictedDataTokenWorkflow.java) - Amazon-published Java reference implementation for the full RDT workflow.
+
+### MCP Servers and AI Integration
+
+- [mattcoatsworth/AmazonSeller-mcp-server](https://github.com/mattcoatsworth/AmazonSeller-mcp-server) - Community Model Context Protocol server exposing SP-API operations to LLM agents.
+- [SP-API and Data Kiosk MCP workshop](https://github.com/amzn/selling-partner-api-samples/discussions/202) - Amazon-published workshop combining the Model Context Protocol with SP-API and Data Kiosk for natural-language seller operations.
 
 ## Guides and Tutorials
 
