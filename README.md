@@ -40,6 +40,7 @@ The Selling Partner API is Amazon's REST-based suite of APIs for sellers and ven
 - [SP-API Documentation Portal](https://developer-docs.amazon.com/sp-api) - Full reference for every API, schema, and use case.
 - [SP-API Release Notes](https://developer-docs.amazon.com/sp-api/docs/sp-api-release-notes) - Authoritative changelog with RSS feed.
 - [SP-API Changelog](https://developer-docs.amazon.com/sp-api/changelog) - Breaking-change announcements and deprecation timelines.
+- [SP-API Health Dashboard](https://developer.amazonservices.com/health) - Real-time API health status for NA, EU, and FE regions.
 - [Usage Plans and Rate Limits](https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits) - Token-bucket algorithm reference.
 - [Strategies to Optimize Rate Limits](https://developer-docs.amazon.com/sp-api-blog/docs/strategies-to-optimize-rate-limits-for-your-application-workloads) - Throttling strategies, dynamic plans, and batch patterns.
 - [Selling Partner API Blog](https://developer-docs.amazon.com/sp-api-blog/docs) - Implementation notes, architecture guidance, and use-case deep dives from the SP-API team.
