@@ -31,6 +31,8 @@ The Selling Partner API is Amazon's REST-based suite of APIs for sellers and ven
 - [Guides and Tutorials](#guides-and-tutorials)
 - [Video Content](#video-content)
 - [Communities](#communities)
+- [Compliance and Regulatory](#compliance-and-regulatory)
+- [Related Amazon APIs](#related-amazon-apis)
 ## Official Resources
 
 ### Documentation and Reference
@@ -159,6 +161,19 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 - [amzn/selling-partner-api-models GitHub Discussions](https://github.com/amzn/selling-partner-api-models/discussions) - The most active SP-API technical forum, with responses from Amazon Solutions Architects.
 - [Stack Overflow: amazon-selling-partner-api tag](https://stackoverflow.com/questions/tagged/amazon-selling-partner-api) - Q&A archive.
 - [Spio Community](https://spiohq.com) - Vendor-hosted Discourse forum for SP-API developers, run by the curator (see Contributing section below).
+
+## Compliance and Regulatory
+
+- [GPSR Listings Compliance Changelog](https://developer-docs.amazon.com/sp-api/changelog/developers-can-use-attributes-in-their-programmatic-listings-submissions-to-comply-with-gpsr) - Mandatory GPSR attribute submission via Listings Items API v2021-08-01 or JSON_LISTINGS_FEED; required for EU listings from December 2024.
+- [Listings Items API v2021-08-01 Reference](https://developer-docs.amazon.com/sp-api/docs/listings-items-api-v2021-08-01-reference) - Canonical schema for GPSR-compliant listings, including Responsible Person and safety attribute groups.
+- [EU Digital Product Passport overview](https://en.wikipedia.org/wiki/EU_Digital_Product_Passport) - Neutral primer on the DPP framework affecting SP-API listings from 2026 onward.
+
+## Related Amazon APIs
+
+- [Amazon Ads API documentation](https://advertising.amazon.com/API/docs) - Official reference for Amazon's advertising APIs, used by sellers and vendors alongside SP-API.
+- [amzn/ads-advanced-tools-docs](https://github.com/amzn/ads-advanced-tools-docs) - Official Amazon Ads code samples and advanced tooling documentation.
+- [@whitebox-co/amazon-ads-api](https://github.com/whitebox-co/amazon-ads-api) - Fully-typed TypeScript SDK auto-generated from the Amazon Ads OpenAPI schemas.
+- [denisneuf/python-amazon-ad-api](https://github.com/denisneuf/python-amazon-ad-api) - Python wrapper for the Amazon Advertising API, frequently used alongside the SP-API Python client.
 
 ## Contributing
 
