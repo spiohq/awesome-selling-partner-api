@@ -72,6 +72,7 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 
 ### Node.js and TypeScript
 
+- [ajmnz/selling-partner-api-node](https://github.com/ajmnz/selling-partner-api-node) - Typesafe Node.js client with automatic rate-limit handling and STS role assumption.
 - [jrl84/amazon-sp-api](https://github.com/jrl84/amazon-sp-api) - Most-installed community client (`amazon-sp-api` on npm) with internal rate limiting, automatic token refresh, and report download helpers.
 - [bizon/selling-partner-api-sdk](https://github.com/bizon/selling-partner-api-sdk) - Modular TypeScript SDK with per-API packages (`@sp-api-sdk/*`), auto-generated types, dual CJS/ESM output, and notification/report/feed schemas.
 - [amzn/selling-partner-api-sdk (JavaScript)](https://github.com/amzn/selling-partner-api-sdk/tree/main/javascript) - Amazon's official JavaScript SDK with built-in rate limiter. Apache-2.0.
