@@ -29,8 +29,6 @@ The Selling Partner API is Amazon's REST-based suite of APIs for sellers and ven
 - [Guides and Tutorials](#guides-and-tutorials)
 - [Video Content](#video-content)
 - [Communities](#communities)
-- [Disclosure](#disclosure)
-
 ## Official Resources
 
 ### Documentation and Reference
@@ -114,7 +112,7 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 
 ### Proxies and Gateways
 
-- [Spio Smart Proxy](https://github.com/spiohq/smart-proxy) - Open-source SP-API reverse proxy with per-account token-bucket rate limiting, response caching, automatic Restricted Data Token minting, and built-in DPP-compliant PII redaction. Single Go binary, embedded SQLite, dashboard. AGPL-3.0. Maintained by the curator (see [Disclosure](#disclosure)).
+- [Spio Smart Proxy](https://github.com/spiohq/smart-proxy) - Open-source SP-API reverse proxy with per-account token-bucket rate limiting, response caching, automatic Restricted Data Token minting, and built-in DPP-compliant PII redaction. Single Go binary, embedded SQLite, dashboard. AGPL-3.0. Maintained by the curator (see Contributing section below).
 
 ### Notifications and Event Pipelines
 
@@ -147,17 +145,11 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 
 - [amzn/selling-partner-api-models GitHub Discussions](https://github.com/amzn/selling-partner-api-models/discussions) - The most active SP-API technical forum, with responses from Amazon Solutions Architects.
 - [Stack Overflow: amazon-selling-partner-api tag](https://stackoverflow.com/questions/tagged/amazon-selling-partner-api) - Q&A archive.
-- [Spio Community](https://spiohq.com) - Discourse instance for SP-API developers, run by the curator (see [Disclosure](#disclosure)).
-
-## Disclosure
-
-This list is maintained by Stefan, founder of Spio. Two of the entries are projects I am personally involved with: **Spio Smart Proxy** under Proxies and Gateways, and the **Spio Community** under Communities. Spio Smart Proxy is the only purpose-built open-source SP-API reverse proxy out there, and there is no comparable developer community to point readers to. Both follow the same inclusion criteria as every other entry, and contributors are welcome to PR for their removal if they no longer meet the bar.
+- [Spio Community](https://spiohq.com) - Vendor-hosted Discourse forum for SP-API developers, run by the curator (see Contributing section below).
 
 ## Contributing
 
 Contributions are welcome. Read the [contribution guidelines](CONTRIBUTING.md) first. The list prunes inactive libraries and seller-facing tooling; please check the criteria before opening a PR.
 
----
+**Curator disclosure:** This list is maintained by Stefan, founder of Spio. Two entries are projects I am personally involved with: **Spio Smart Proxy** under Proxies and Gateways, and the **Spio Community** under Communities. Both meet the same inclusion criteria as every other entry. Contributors are welcome to PR for their removal if they no longer meet the bar.
 
-To the extent possible under law, the curator has waived all copyright and related or neighboring rights to this work.
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
