@@ -151,6 +151,7 @@ Only actively-maintained libraries are listed. "Actively maintained" means a rel
 - [Pell Software: Developing with the SP-API](https://www.pellsoftware.com/developing-amazon-sp-api/) - First-time Node.js integration walkthrough.
 - [Highside Labs documentation](https://docs.highsidelabs.co/) - Feed Transformer and SP-API Starter Kit docs, plus multi-seller patterns and Laravel integration deep-dives.
 - [Deltologic SP-API guide](https://www.deltologic.com/blog/a-step-by-step-guide-to-understanding-and-using-amazons-selling-partner-api) - Multi-module video course covering setup through Notifications.
+- [Amazon SP-API Postman walkthrough](https://marco-tibaldeschi.medium.com/amazon-sp-api-postman-476075c09fd3) - Step-by-step setup for testing SP-API in Postman with the full LWA auth chain.
 
 ## Video Content
 
